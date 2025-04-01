@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="poke_home.css">
+</head>
+<body>
+    <!--POP-UP-->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <div class="popup-img">
+                <a href="/Pokemon_Webstore/poke_store.html">
+                    <img src="img/pokeball.png" alt="Pokeball" class="pokeball">
+                </a>
+            </div>
+            <div class="popup-text">
+                <h2>Welcome to Snorlax!</h2>
+                <p>Click the Poké Ball to proceed to the store!</p>
+            </div>
+        </div>
+    </div> 
+
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/Snorlax Logo.png" alt="Logo" class="logo-img">
+            <span class="grp">Snorlax</span>
+        </div>
+
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="/Pokemon_Webstore/poke_store.html" class="nav-link">Store</a>
+            <i class="fas fa-shopping-cart"></i>
+            <a href="regis.html"><i class="fas fa-user-circle"></i></a>
+        </div>
+    </nav>
+
+
+    <!--VIDEO-->
+    <div class="video-container">
+        <video autoplay muted loop playsinline>
+            <source src="pokemon_vid.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="video-text">
+            <div class="video-text-wrapper">
+                <img src="img/pokeball.png" alt="Pokeball" class="pokeball-side">
+                <div class="video-text-content">
+                    <h1>Catch Pokémon</h1>
+                    <h2>Find your buddy!</h2>
+                    <p>Catching Pokémon is one way to collect them! You can also collect them by hatching Eggs and trading with other Trainers.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team GO Rocket -->
+    <!--CARDS-->
+    <div class="team-rocket"> 
+        <h1 class="team-title">Team GO Rocket</h1>
+        <p class="team-subtitle">Team GO Rocket has invaded the world of Pokémon GO! Whether you’re working on Special Research or just trying to rescue Shadow Pokémon, you can challenge Team GO Rocket and foil their plans.</p>
+    </div>
+        <section class="info-container">
+        <div class="info-card">
+            <img src="img/arlo.png" alt="Arlo" class="info-img">
+            <div class="view-details">
+                <button class="view-team-btn" id="arloBtn">View Details</button>
+            </div>
+        </div>
+        <div class="info-card">
+            <img src="img/cliff.png" alt="Cliff" class="info-img">
+            <div class="view-details">
+                <button class="view-team-btn" id="cliffBtn">View Details</button>
+            </div>
+        </div>
+        <div class="info-card">
+            <img src="img/sierra.png" alt="Sierra" class="info-img">
+            <div class="view-details">
+                <button class="view-team-btn" id="sierraBtn">View Details</button>
+            </div>
+        </div>
+
+        <!--MODALS-->
+        <div id="arloModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal arlo-close">&times;</span>
+                <img src="img/arlo.png" alt="Arlo" class="modal-img">
+                <div class="modal-text">
+                    <h2>Arlo</h2>
+                    <p>Known to be sly and manipulative. After losing to Candela for the position of Team Valor Leader, Arlo joined Team GO Rocket, where he has contributed greatly to its Shadow Pokémon program.</p>
+                </div>
+            </div>
+        </div>
+        <div id="cliffModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal cliff-close">&times;</span>
+                <img src="img/cliff.png" alt="Cliff" class="modal-img">
+                <div class="modal-text">
+                    <h2>Cliff</h2>
+                    <p>He has a short temper, and he is feared for his strength and his intolerance to disloyalty. However, he's also renowned at the same time for his big heart and kind soul.</p>
+                </div>
+            </div>
+        </div>
+        <div id="sierraModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal sierra-close">&times;</span>
+                <img src="img/sierra.png" alt="Sierra" class="modal-img">
+                <div class="modal-text">
+                    <h2>Sierra</h2>
+                    <p>A street-smart loner, she has grown up under difficult circumstances, allowing her to learn martial arts. As she rose within the ranks of Team GO Rocket, she became Giovanni's most trusted confidant.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="adv-store">
+        <div class="adv-img">
+            <img src="img/go-bg.png" alt="PokéStop" class="adv-bg">
+        </div>
+        <div class="adv-overlay">
+            <h1 class="adv-title">Items for Your Adventure</h1>
+            <p class="adv-subtitle">Spin Photo Discs at PokéStops and Gyms to receive items that will help you on your Pokémon GO journey, including Poké Balls, Berries, Evolution items, and more. Go to the store page to learn more.</p>
+        </div>
+    </div>
+
+    <section class="download-section d-flex justify-content-center align-items-center">
+        <div class="download-wrapper bg-secondary text-light py-5">
+            <div class="container">
+                <div class="row download-row justify-content-center align-items-center">
+                    <!-- Left Side: Logo -->
+                    <div class="col-md-5 p-3 text-center">
+                        <img src="img/Snorlax Logo.png" alt="Logo" class="download-logo">
+                    </div>
+                    <!-- Right Side: Text & Links -->
+                    <div class="col-md-7 p-3">
+                        <div class="download-header">
+                            <h2 class="download-title display-5 text-light">Get up and GO! Download Today</h2>
+                        </div>
+                        <div class="download-links text-center">
+                            <a href="#" class="download-btn">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+                                    alt="App Store" class="store-icon app-store">
+                            </a>
+                            <a href="#" class="download-btn">
+                                <img src="https://png.pngtree.com/png-vector/20230817/ourmid/pngtree-google-play-app-icon-vector-png-image_9183316.png"
+                                    alt="Play Store" class="store-icon play-store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">GO FEST</a></li>
+                    <li><a href="#">NEWS</a></li>
+                    <li><a href="#">SEASONS</a></li>
+                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="#">COMMUNITY DAY MAP</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-icons">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <div class="footer-logos">
+                <img src="img/Snorlax Logo.png" alt="Snorlax">
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>All images and assets used in this site are the property of Niantic, Inc. This project is created for educational purposes only and no copyright infringement is intended.</p>
+        </div>
+    </footer>
+    
+    <script src="poke_home.js"></script>
+</body>
+</html>
